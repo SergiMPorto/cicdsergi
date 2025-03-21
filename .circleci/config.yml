@@ -19,3 +19,4 @@ jobs:
       - run:
           name: Ejecutar Numero_Primo_Main
           command: java -cp NumerpPrimoAPP/src/main/java Laboratorio.Numero_Primo_Main
+
