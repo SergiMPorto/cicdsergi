@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/openjdk:21.0  # Imagen de Docker con Java
+      - image: cimg/openjdk:21.0  # Usa la versión que necesites
     working_directory: ~/project
     steps:
       - checkout
@@ -11,8 +11,12 @@ jobs:
           name: Verificar versión de Java
           command: java -version
       - run:
-          name: Compilar JavaVersionCheck.java
-          command: javac JavaVersionCheck.java && java JavaVersionCheck
+          name: Listar archivos disponibles
+          command: ls -la
       - run:
-          name: Construir con Maven
-          command: mvn clean install
+          name: Compilar JavaVersionCheck.java
+          command: javac src/main/java/JavaVersionCheck.java
+      - run:
+          name: Ejecutar JavaVersionCheck
+          command: java -cp src/main/java JavaVersionCheck
+
