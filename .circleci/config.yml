@@ -17,6 +17,9 @@ jobs:
           name: Compilar todas las clases de NumeroPrimoAPP
           command: javac -d NumeroPrimoAPP/target/classes NumeroPrimoAPP/src/main/java/Laboratorio/*.java
       - run:
+          name: Mostrar archivos compilados
+          command: ls -R NumeroPrimoAPP/target/classes
+      - run:
           name: Ejecutar Numero_Primo_Main
           command: java -cp NumeroPrimoAPP/target/classes Laboratorio.Numero_Primo_Main
 
