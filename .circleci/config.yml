@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/openjdk:21.0  
+      - image: cimg/openjdk:21.0 
     working_directory: ~/project/NumeroPrimoAPP  # Ajusta la carpeta raíz
     steps:
       - checkout
@@ -15,7 +15,7 @@ jobs:
           command: ls -R 
       - run:
           name: Compilar Numero_Primo_Main
-          command: javac src/main/java/Laboratorio1/Numero_Primo_Main.java
+          command: javac src/main/java/Laboratorio/Numero_Primo_Main.java
       - run:
           name: Ejecutar Numero_Primo_Main
-          command: java -cp src/main/java Laboratorio1.Numero_Primo_Main
+          command: java -cp src/main/java Laboratorio.Numero_Primo_Main
