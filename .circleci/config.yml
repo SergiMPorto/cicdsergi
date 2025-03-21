@@ -20,6 +20,7 @@ jobs:
           name: Mostrar archivos compilados
           command: ls -R NumeroPrimoAPP/target/classes
       - run:
-          name: Ejecutar Numero_Primo_Main
-          command: java -cp NumeroPrimoAPP/target/classes Laboratorio.Numero_Primo_Main
+          name: Ejecutar Numero_Primo_Main con los valores 5, 10 y 15
+          command: echo -e "5\n10\n15" | java -cp NumeroPrimoAPP/target/classes Laboratorio.Numero_Primo_Main
+
 
