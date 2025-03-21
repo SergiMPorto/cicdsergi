@@ -11,8 +11,8 @@ jobs:
           name: Verificar versión de Java
           command: java -version
       - run:
-          name: Mostrar estructura de archivos
-          command: ls -R
+          name: mostrar contenido de la carpeta src/main/java
+          command: ls -R 
       - run:
           name: Compilar JavaVersionCheck.java
           command: javac src/main/java/JavaVersionCheck.java
