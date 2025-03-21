@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:21  # Cambia según la versión que necesites
+      - image: cimg/openjdk:21.0  # Imagen de Docker con Java
     working_directory: ~/project
     steps:
       - checkout
