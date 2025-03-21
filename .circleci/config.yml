@@ -14,8 +14,8 @@ jobs:
           name: mostrar contenido de la carpeta src/main/java
           command: ls -R 
       - run:
-          name: Compilar JavaVersionCheck.java
-          command: javac src/main/java/JavaVersionCheck.java
+          name: Compilar Numero_Primo_Main
+          command: javac src/main/java/Laboratorio1/Numero_Primo_Main.java
       - run:
           name: Ejecutar Numero_Primo_Main
           command: java -cp src/main/java Laboratorio1.Numero_Primo_Main
