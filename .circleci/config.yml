@@ -12,7 +12,7 @@ jobs:
           command: java -version
       - run:
           name: Mostrar estructura de archivos
-          command: tree -L 3
+          command: ls -R
       - run:
           name: Compilar JavaVersionCheck.java
           command: javac src/main/java/JavaVersionCheck.java
