@@ -12,10 +12,10 @@ jobs:
           command: java -version
       - run:
           name: mostrar contenido de la carpeta src/main/java
-          command: ls -R 
+          command: ls -R NumeroPrimoAPP/src/main/java/Laboratorio/
       - run:
-          name: Compilar Numero_Primo_Main
-          command: javac NumeroPrimoAPP/src/main/java/Laboratorio/Numero_Primo_Main.java
+          name: Compilar todas las clases de NumeroPrimoAPP
+          command: javac NumeroPrimoAPP/src/main/java/Laboratorio/*.java
       - run:
           name: Ejecutar Numero_Primo_Main
           command: java -cp NumerpPrimoAPP/src/main/java Laboratorio.Numero_Primo_Main
