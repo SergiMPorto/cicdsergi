@@ -16,7 +16,7 @@
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <sonar.projectKey>***REMOVED***</sonar.projectKey>
-    <sonar.organization>sergimporto</sonar.organization>
+    <sonar.organization>Sergi</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
