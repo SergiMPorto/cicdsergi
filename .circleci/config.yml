@@ -63,6 +63,9 @@ jobs:
       - run:
           name: Run Checkstyle
           command: cd NumeroPrimoAPP && mvn checkstyle:check
+      - run:
+          name: executeJacoco
+          command: cd NumeroPrimoAPP && mvn verify 
 
 workflows:
   testing_workflow:
