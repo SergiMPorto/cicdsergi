@@ -51,7 +51,7 @@ jobs:
 
           
 workflows:
-  my_workflow:
+  testing_workflow:
     jobs:
       - build
       - show_files
