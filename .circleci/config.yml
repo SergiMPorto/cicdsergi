@@ -4,7 +4,7 @@ executors:
   java_executor:
     docker:
       - image: cimg/openjdk:21.0
-    working_directory: ~/project
+    working_directory: ~/project/NumeroPrimoAPP
 
 jobs:
   build:
