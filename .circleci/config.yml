@@ -1,26 +1,58 @@
 version: 2.1
 
+executors:
+  java_executor:
+    docker:
+      - image: cimg/openjdk:21.0  # mejor que circleci/openjdk (deprecated)
+    working_directory: ~/project
+
 jobs:
   build:
-    docker:
-      - image: cimg/openjdk:21.0 
-    working_directory: ~/project
+    executor: java_executor
     steps:
       - checkout
       - run:
-          name: Verificar versión de Java
+          name: Ver versión de Java
           command: java -version
       - run:
-          name: mostrar contenido de la carpeta src/main/java
-          command: ls -R NumeroPrimoAPP/src/main/java/Laboratorio/
-      - run:
-          name: Compilar todas las clases de NumeroPrimoAPP
-          command: javac -d NumeroPrimoAPP/target/classes NumeroPrimoAPP/src/main/java/Laboratorio/*.java
-      - run:
-          name: Mostrar archivos compilados
-          command: ls -R NumeroPrimoAPP/target/classes
-      - run:
-          name: Ejecutar Numero_Primo_Main con los valores 5, 10 y 15
-          command: echo -e "5\n10\n15" | java -cp NumeroPrimoAPP/target/classes Laboratorio.Numero_Primo_Main
+          name: Compilar clases Java
+          command: javac -d target/classes NumeroPrimoAPP/src/main/java/Laboratorio/*.java
+      - ***REMOVED***:
+          root: target
+          paths:
+            - classes
 
+  show_files:
+    executor: java_executor
+    steps:
+      - checkout
+      - run:
+          name: Mostrar archivos fuente
+          command: ls -R NumeroPrimoAPP/src/main/java/Laboratorio
 
+  test:
+    executor: java_executor
+    steps:
+      - checkout
+      - attach_workspace:
+          at: target
+      - run:
+          name: Descargar JUnit 5
+          command: |
+            mkdir -p libs
+            curl -L -o libs/junit.jar https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.0/junit-platform-console-standalone-1.10.0.jar
+      - run:
+          name: Compilar test
+          command: javac -cp "libs/junit.jar:target/classes" -d target/test-classes NumeroPrimoAPP/src/test/java/Laboratorio/*.java
+      - run:
+          name: Ejecutar test
+          command: java -jar libs/junit.jar --class-path target/classes:target/test-classes --scan-class-path
+          
+workflows:
+  my_workflow:
+    jobs:
+      - build
+      - show_files
+      - test:
+          requires:
+            - build
