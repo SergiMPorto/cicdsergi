@@ -73,7 +73,14 @@ jobs:
       - run:
           name: Run SonarQube
           command: cd NumeroPrimoAPP && mvn sonar:sonar -Dsonar.projectKey=***REMOVED*** -Dsonar.organization=sergimporto -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
-        
+
+  segurity:
+    executor: java_executor
+    steps:
+      - checkout
+      - run:
+          name: GitGuardian
+          command: ggshield scan repo .   
 
 
 workflows:
@@ -88,4 +95,9 @@ workflows:
           requires:
             - build
           context: SonarCloud
+      - segurity:
+          requires:
+            - build
+          context: GitGuardian
+
 
