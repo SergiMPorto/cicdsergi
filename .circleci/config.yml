@@ -67,6 +67,7 @@ jobs:
           name: executeJacoco
           command: cd NumeroPrimoAPP && mvn verify 
       - store_artifacts:
+          name: Jacoco Report
           path: NumeroPrimoAPP/target/site/jacoco/index.html
           destination: coverage-report
       - run:
