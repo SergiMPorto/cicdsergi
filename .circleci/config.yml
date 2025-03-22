@@ -68,7 +68,8 @@ jobs:
           command: cd NumeroPrimoAPP && mvn verify 
       - run:
           name: Run SonarQube
-          command: mvn sonar:sonar -Dsonar.projectKey=lab1 -Dsonar.organization=lab1 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+          command: cd NumeroPrimoAPP && mvn sonar:sonar -Dsonar.projectKey=lab1 -Dsonar.organization=sergimporto -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
+
 
 workflows:
   testing_workflow:
