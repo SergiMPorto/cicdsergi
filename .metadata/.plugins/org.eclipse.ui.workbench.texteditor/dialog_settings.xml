@@ -14,7 +14,7 @@
 		<list key="replacehistory">
 		</list>
 	</section>
-	<section name="org.eclipse.ui.texteditor.***REMOVED***">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="1202"/>
 		<item key="DIALOG_Y_ORIGIN" value="321"/>
 		<item key="DIALOG_WIDTH" value="414"/>

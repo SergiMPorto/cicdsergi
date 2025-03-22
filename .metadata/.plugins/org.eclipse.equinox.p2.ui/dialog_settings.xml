@@ -9,14 +9,14 @@
 	</section>
 	<section name="AvailableIUsPage">
 		<item key="AvailableViewType" value="1"/>
-		<item key="***REMOVED***" value="true"/>
-		<item key="***REMOVED***" value="true"/>
-		<item key="***REMOVED***" value="true"/>
+		<item key="ShowLatestVersionsOnly" value="true"/>
+		<item key="HideInstalledContent" value="true"/>
+		<item key="ResolveInstallWithAllSites" value="true"/>
 		<item key="FilterOnEnv" value="false"/>
-		<item key="***REMOVED***" value="600"/>
-		<item key="***REMOVED***" value="320"/>
-		<item key="***REMOVED***" value="800"/>
-		<item key="***REMOVED***" value="200"/>
+		<item key="AvailableNameColumnWidth" value="600"/>
+		<item key="AvailableVersionColumnWidth" value="320"/>
+		<item key="AvailableListSashWeight" value="800"/>
+		<item key="AvailableDetailsSashWeight" value="200"/>
 	</section>
 	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.SelectableIUsPage">
 		<item key="NameColumnWidth" value="480"/>
@@ -25,7 +25,7 @@
 		<item key="ListSashWeight" value="800"/>
 		<item key="DetailsSashWeight" value="200"/>
 	</section>
-	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.***REMOVED***">
+	<section name="org.eclipse.equinox.internal.p2.ui.dialogs.InstallWizard.ResolutionResultsPage">
 		<item key="NameColumnWidth" value="400"/>
 		<item key="VersionColumnWidth" value="200"/>
 		<item key="IDColumnWidth" value="200"/>

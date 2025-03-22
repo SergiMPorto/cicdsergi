@@ -1,0 +1,6 @@
+# Secrets
+*.pem
+*.key
+*.env
+eval $(ssh-agent -s)
+.metadata/

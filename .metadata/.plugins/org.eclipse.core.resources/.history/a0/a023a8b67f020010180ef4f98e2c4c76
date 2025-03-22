@@ -16,7 +16,7 @@
     <maven.compiler.release>17</maven.compiler.release>
   </properties>
 
-  <***REMOVED***>
+  <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.junit</groupId>
@@ -26,7 +26,7 @@
         <scope>import</scope>
       </dependency>
     </dependencies>
-  </***REMOVED***>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -50,7 +50,7 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#***REMOVED*** -->
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.3.1</version>

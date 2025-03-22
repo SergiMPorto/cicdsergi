@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Compilar clases Java
           command: javac -d target/classes NumeroPrimoAPP/src/main/java/Laboratorio/*.java
-      - ***REMOVED***:
+      - persist_to_workspace:
           root: target
           paths:
             - classes
@@ -72,7 +72,7 @@ jobs:
           destination: coverage-report
       - run:
           name: Run SonarQube
-          command: cd NumeroPrimoAPP && mvn sonar:sonar -Dsonar.projectKey=***REMOVED*** -Dsonar.organization=sergimporto -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
+          command: cd NumeroPrimoAPP && mvn sonar:sonar -Dsonar.projectKey=SergiMPorto_cicdsergi -Dsonar.organization=sergimporto -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_TOKEN}
 
   segurity:
     executor: java_executor
