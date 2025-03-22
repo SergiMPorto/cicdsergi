@@ -82,5 +82,5 @@ workflows:
       - testandlint:
           requires:
             - build
-          context: sonarcloud
+          context: SonarCloud
 
