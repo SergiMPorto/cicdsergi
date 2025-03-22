@@ -86,7 +86,7 @@ jobs:
             pip3 install --upgrade ggshield
       - run:
           name: GitGuardian
-          command: ggshield scan repo .   
+          command: ggshield secret scan repo .  
 
 
 workflows:
