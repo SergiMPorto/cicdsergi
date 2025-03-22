@@ -43,10 +43,12 @@ jobs:
             curl -L -o libs/junit.jar https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.0/junit-platform-console-standalone-1.10.0.jar
       - run:
           name: Compilar test
-          command: javac -cp "libs/junit.jar:target/classes" -d target/test-classes NumeroPrimoAPP/src/test/java/Laboratorio/*.java
+          command: find NumeroPrimoAPP/src/test/java -name "*.java" > test_sources.txt && javac -cp "libs/junit.jar:target/classes" -d target/test-classes @test_sources.txt
+
       - run:
           name: Ejecutar test
           command: java -jar libs/junit.jar --class-path target/classes:target/test-classes --scan-class-path
+
           
 workflows:
   my_workflow:
