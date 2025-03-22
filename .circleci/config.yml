@@ -4,7 +4,7 @@ executors:
   java_executor:
     docker:
       - image: cimg/openjdk:21.0
-    working_directory: ~/project/NumeroPrimoAPP
+    working_directory: ~/project/
 
 jobs:
   build:
@@ -56,13 +56,13 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: mvn clean install
+          command: cd NumeroPrimoAPP && mvn clean install
       - run:
           name: Run tests
-          command: mvn test
+          command: cd NumeroPrimoAPP && mvn test
       - run:
           name: Run Checkstyle
-          command: mvn checkstyle:check
+          command: cd NumeroPrimoAPP && mvn checkstyle:check
 
 workflows:
   testing_workflow:
