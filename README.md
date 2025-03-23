@@ -94,4 +94,9 @@ Para desplegar la aplicación en el clúster con ArgoCD se siguieron estos pasos
 
 ---
 
+## Explicación vídeo:
+- [video1 app y job build](https://www.loom.com/share/e5f90ce263f844eb9f426794aad62b60)
+- [video2 jobs test](https://www.loom.com/share/e47d3cc433f542b3af32cf85e596bcdb)
+- [video3 jobs security](https://www.loom.com/share/4a543a415c5c4a2c8c46d6a418e3b056)
+
 
