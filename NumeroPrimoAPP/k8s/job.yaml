@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Job
+metadata:
+  name: numero-primo-job
+spec:
+  template:
+    metadata:
+      labels:
+        app: numero-primo
+    spec:
+      containers:
+        - name: numero-primo
+          image: sergimp/numero-primo:latest
+      restartPolicy: Never
+  backoffLimit: 3
