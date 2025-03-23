@@ -93,7 +93,7 @@ jobs:
           name: Upload artifact to GitHub Releases
           command: |
             TAG="v1.0.0"
-            FILE="NumeroPrimoAPP/target/NumeroPrimoAPP-v1.0-SNAPSHOT.jar"
+            FILE="NumeroPrimoAPP/target/NumeroPrimoAPP-1.0-SNAPSHOT.jar"
             REPO="SergiMPorto/cicdsergi"
 
             echo "Creating release $TAG on GitHub..."
