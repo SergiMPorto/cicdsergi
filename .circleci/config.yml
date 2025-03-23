@@ -81,9 +81,14 @@ jobs:
 
 
   release:
-    executor: java_executor
-    steps:
+     executor: java_executor
+     steps:
       - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: testing archive .jar
+          command: ls -lh NumeroPrimoAPP/target/
       - run:
           name: Upload artifact to GitHub Releases
           command: |
@@ -105,6 +110,7 @@ jobs:
               -H "Authorization: token $GITHUB_TOKEN" \
               -H "Content-Type: application/java-archive" \
               --data-binary @"$FILE"
+
 
 
   security:
