@@ -72,11 +72,13 @@ jobs:
           destination: jar-release
       - run:
           name: Run SonarQube
-          command: cd NumeroPrimoAPP && mvn sonar:sonar \
+          command: |
+            cd NumeroPrimoAPP && mvn sonar:sonar \
             -Dsonar.projectKey=SergiMPorto_cicdsergi \
             -Dsonar.organization=sergimporto \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${SONAR_TOKEN}
+
 
   release:
     executor: java_executor
