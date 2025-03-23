@@ -1,6 +1,6 @@
 package Laboratorio;
 
-import java.util.Scanner;
+
 
 public class Numero_Primo extends Thread {
     private long numero;
